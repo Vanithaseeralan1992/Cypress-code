@@ -27,10 +27,17 @@ it('facebook login', function(){
 
 })
 
-it.only('facebook signup automation', function()
+it('facebook signup automation', function()
 {
  cy.visit('https://www.facebook.com/campaign/landing.php')
  cy.get('[data-testid=cookie-policy-dialog-accept-button]').click()
 
 
+})
+
+it.only('github login', function(){
+    cy.visit('https://github.com/login')
+    cy.get('#login_field').type('Vanithaseeralan1992')
+    cy.get('#password').type('0998458945')
+    cy.get('.btn').click()
 })
